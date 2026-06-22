@@ -1,0 +1,82 @@
+{
+  "niche": "Spray Foam Insulation Contractor Insurance — Miami / South Florida",
+  "geo": "Miami-Dade, Broward, Palm Beach, Monroe (Keys), and statewide Florida",
+  "head_terms": [
+    "spray foam insurance",
+    "spray foam contractor insurance",
+    "spray foam insulation insurance",
+    "insulation contractor insurance Florida"
+  ],
+  "geo_terms": [
+    "spray foam insurance Miami",
+    "Miami spray foam contractor insurance",
+    "South Florida insulation contractor insurance",
+    "spray foam insurance Broward",
+    "spray foam insurance Fort Lauderdale",
+    "contractor insurance Miami FL",
+    "Florida spray foam insurance"
+  ],
+  "service_keywords": {
+    "general-liability": [
+      "spray foam general liability Florida",
+      "insulation contractor GL Miami",
+      "completed operations coverage SPF"
+    ],
+    "workers-compensation": [
+      "spray foam workers comp Florida",
+      "heat stress workers comp SPF",
+      "isocyanate exposure workers compensation"
+    ],
+    "contractors-pollution-liability": [
+      "contractors pollution liability spray foam",
+      "CPL insurance SPF Florida",
+      "isocyanate pollution coverage Miami"
+    ],
+    "commercial-auto": [
+      "commercial auto insulation contractor Miami",
+      "spray foam rig insurance Florida",
+      "contractor vehicle coverage South Florida"
+    ],
+    "inland-marine-equipment": [
+      "inland marine spray foam",
+      "spray rig equipment insurance Florida",
+      "proportioner coverage"
+    ],
+    "professional-liability": [
+      "professional liability spray foam",
+      "E&O insulation contractor Florida",
+      "R-value claims insurance"
+    ],
+    "builders-risk": [
+      "builders risk spray foam Florida",
+      "course of construction insurance Miami",
+      "hurricane season builders risk"
+    ],
+    "windstorm-named-storm": [
+      "windstorm insurance contractor Florida",
+      "named storm coverage",
+      "Citizens Property Insurance contractor"
+    ]
+  },
+  "florida_specific": [
+    "Florida insurance market hardening",
+    "Miami-Dade NOA compliance",
+    "HVHZ high velocity hurricane zone",
+    "coastal salt air corrosion",
+    "humidity and mold moisture control",
+    "hurricane season (June 1 - Nov 30) risk",
+    "Citizens Property Insurance depopulation",
+    "Florida Office of Insurance Regulation"
+  ],
+  "paa_questions": [
+    "Does general liability cover spray foam isocyanate claims in Florida?",
+    "Why is contractor insurance so expensive in South Florida right now?",
+    "Do spray foam contractors need contractors pollution liability?",
+    "Can I get insurance if I work in the HVHZ / Miami-Dade?",
+    "How do I insure my spray rig against hurricane damage?",
+    "Is workers comp required for spray foam crews in Florida?",
+    "What is named storm deductible and does it affect my business?",
+    "Can you insure a contractor who has been dropped by Citizens or another carrier?"
+  ],
+  "intent_notes": "South FL is a hardening insurance market; many SPF contractors are non-renewed by coastal carriers after hurricane-season losses. Strong intent around placement of hard-to-place risks, hurricane/windstorm exposure, and humidity/mold completed-operations claims. CPL remains the #1 differentiator statewide."
+}

@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   SPRAY FOAM INSULATION MIAMI — "Atlantic Coastal" Design System
+   Light · bright · coastal-corporate · wave + porthole motif
+   (token names inherited from scaffold; VALUES remapped to teal/lagoon/coral)
+   ============================================================ */
+
+@layer base {
+  :root {
+    /* Backgrounds */
+    --bg-cream: #F2F8FA;   /* page mist */
+    --bg-sand: #E4F1F4;    /* alt foam */
+    --bg-white: #FFFFFF;
+
+    /* Brand — Atlantic Coastal */
+    --clay: #0C5A6B;        /* primary — deep Atlantic teal ("ocean") */
+    --clay-dark: #083F4D;
+    --sage: #12A4A0;        /* secondary — tropical lagoon teal */
+    --gold: #FF6B5B;        /* accent — coral */
+
+    /* Text */
+    --espresso: #0B2B33;    /* headings — ink */
+    --cocoa: #33474D;       /* body — slate */
+    --mocha: #5E7178;       /* muted — steel */
+
+    /* Border */
+    --adobe: #CFE3E8;       /* cool mist line */
+
+    --radius: 1rem;
+  }
+
+  * { border-color: var(--adobe); }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--bg-cream);
+    color: var(--cocoa);
+    font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+    color: var(--espresso);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  ::selection {
+    background: rgba(12, 90, 107, 0.16);
+    color: var(--espresso);
+  }
+}
+
+@layer components {
+  .container-tight { @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8; }
+  .container-wide { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+  /* === Buttons === */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full
+           bg-clay text-white font-heading font-semibold text-base
+           shadow-warm hover:bg-clay-dark hover:shadow-warm-lg
+           hover:-translate-y-0.5 transition-all duration-200
+           focus:outline-none focus:ring-4 focus:ring-clay/25;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full
+           bg-white text-espresso font-heading font-semibold text-base
+           border-2 border-adobe hover:border-clay hover:text-clay
+           hover:-translate-y-0.5 transition-all duration-200
+           focus:outline-none focus:ring-4 focus:ring-clay/15;
+  }
+  .btn-sage {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full
+           bg-sage text-white font-heading font-semibold text-base
+           shadow-warm hover:bg-sage-dark hover:shadow-warm-lg
+           hover:-translate-y-0.5 transition-all duration-200;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full
+           text-cocoa font-medium text-sm hover:bg-sand hover:text-clay
+           transition-colors duration-200;
+  }
+
+  /* === Cards === */
+  .card-warm {
+    @apply bg-white rounded-3xl border border-adobe shadow-card
+           hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300;
+  }
+  .card-arch {
+    @apply bg-white border border-adobe shadow-card
+           rounded-t-[12rem] rounded-b-3xl
+           hover:shadow-card-hover transition-all duration-300;
+  }
+  .pill { @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-heading font-semibold uppercase tracking-wider; }
+  .pill-clay { @apply pill bg-clay/10 text-clay border border-clay/20; }
+  .pill-sage { @apply pill bg-sage/10 text-sage border border-sage/20; }
+  .pill-gold { @apply pill bg-gold/15 text-gold-dark border border-gold/30; }
+
+  /* === Section headings === */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-[0.18em] text-clay;
+  }
+  .h-section { @apply font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-espresso leading-[1.1]; }
+  .lead { @apply text-lg md:text-xl text-mocha leading-relaxed; }
+
+  /* === Decorative motifs (coastal) === */
+  .bg-sonoran {  /* coastal mist bg */
+    background-color: var(--bg-cream);
+    background-image:
+      radial-gradient(circle at 15% 15%, rgba(18, 164, 160, 0.10) 0%, transparent 35%),
+      radial-gradient(circle at 85% 75%, rgba(12, 90, 107, 0.06) 0%, transparent 40%);
+  }
+  .bg-sonoran-sand {  /* coastal foam bg */
+    background-color: var(--bg-sand);
+    background-image:
+      radial-gradient(circle at 70% 20%, rgba(18, 164, 160, 0.08) 0%, transparent 45%),
+      radial-gradient(circle at 20% 80%, rgba(255, 107, 91, 0.06) 0%, transparent 40%);
+  }
+  .bg-warm-radial {  /* cool coastal radial */
+    background:
+      radial-gradient(ellipse at top, rgba(18, 164, 160, 0.12) 0%, transparent 55%),
+      radial-gradient(ellipse at bottom right, rgba(12, 90, 107, 0.06) 0%, transparent 50%),
+      var(--bg-cream);
+  }
+  /* Wave horizon band — coastal gradient stripe (lagoon → coral) */
+  .horizon-band {
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(18, 164, 160, 0.0) 8%,
+      rgba(18, 164, 160, 0.45) 28%,
+      rgba(255, 107, 91, 0.55) 50%,
+      rgba(18, 164, 160, 0.45) 72%,
+      rgba(18, 164, 160, 0.0) 92%,
+      transparent 100%);
+  }
+  .dotted-warm {  /* coastal dot grid */
+    background-image: radial-gradient(circle, rgba(12, 90, 107, 0.16) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .arch-divider {
+    position: relative; height: 4rem; width: 100%;
+  }
+  .arch-divider::after {
+    content: ""; position: absolute; inset: 0; margin: auto;
+    width: 8rem; height: 4rem;
+    background: var(--sage);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    opacity: 0.85;
+  }
+
+  /* === Prose for blog === */
+  .prose-warm { @apply max-w-none; }
+  .prose-warm h2 { @apply font-heading font-bold text-2xl md:text-3xl text-espresso mt-12 mb-4; }
+  .prose-warm h3 { @apply font-heading font-bold text-xl md:text-2xl text-espresso mt-8 mb-3; }
+  .prose-warm p { @apply text-cocoa leading-relaxed mb-5 text-[1.05rem]; }
+  .prose-warm ul { @apply my-5 space-y-2 pl-0 list-none; }
+  .prose-warm li { @apply text-cocoa leading-relaxed pl-7 relative; }
+  .prose-warm li::before {
+    content: ""; position: absolute; left: 0; top: 0.55em;
+    width: 1.25rem; height: 1.25rem;
+    background: var(--sage);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    opacity: 0.75;
+  }
+  .prose-warm strong { @apply text-espresso font-semibold; }
+  .prose-warm a { @apply text-clay font-semibold underline decoration-gold/50 underline-offset-2 hover:decoration-clay; }
+  .prose-warm blockquote { @apply border-l-4 border-sage pl-5 py-2 my-6 text-espresso italic font-heading; }
+}
+
+/* === Animations === */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.animate-marquee { animation: marquee 32s linear infinite; }
+
+/* === Reduced motion === */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-sand); }
+::-webkit-scrollbar-thumb { background: var(--clay); border-radius: 6px; border: 2px solid var(--bg-sand); }
+::-webkit-scrollbar-thumb:hover { background: var(--clay-dark); }
+
+/* === Focus visible === */
+:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; border-radius: 4px; }
